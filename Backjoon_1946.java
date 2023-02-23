@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Backjoon_1946 {
     public static void main(String[] args) throws IOException {
@@ -11,34 +9,48 @@ public class Backjoon_1946 {
 
         int N = Integer.parseInt(br.readLine());
 
-        for(int i = 0; i < N; i++) {
+        for(int i =0; i < N; i++){
             int T = Integer.parseInt(br.readLine());
-            int[][] arr = new int[T][2];
 
-            for(int j = 0 ; j < T; j++) {
-                StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-                arr[i][0] = Integer.parseInt(st.nextToken());
-                arr[i][1] = Integer.parseInt(st.nextToken());
+            ArrayList<Grade> list =new ArrayList<>();
+
+            for (int j = 0; j < T; j++) {
+                StringTokenizer st = new StringTokenizer(br.readLine());
+                int a = Integer.parseInt(st.nextToken());
+                int b = Integer.parseInt(st.nextToken());
+
+                list.add(new Grade(a, b));
             }
-
-            Arrays.sort(arr, new Comparator<int[]>() {
-                @Override
-                public int compare(int[] arr1, int[] arr2) {
-                    return Integer.compare(arr1[0], arr2[0]);
-                }
-            });
+            Collections.sort(list);
 
             int count = 1;
-            int prev = arr[0][1];
-            for (int k = 0; i < T; k++) {
-                if (prev > arr[i][1]) {
-                    prev = arr[i][1];
+            int prev = list.get(0).b;
+            for (int k = 1; k < T; k++) {
+                if (prev > list.get(i).b) {
+                    prev = list.get(i).b;
                     count++;
                 }
             }
             System.out.println(count);
         }
-
-
     }
 }
+
+class Grade implements Comparable<Grade> {
+    int a;
+    int b;
+
+    Grade(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public int compareTo(Grade o) {
+        if (this.a > o.a) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+}
+
