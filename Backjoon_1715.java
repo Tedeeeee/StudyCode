@@ -8,7 +8,7 @@ public class Backjoon_1715 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        //우선순위 큐
+        //우선순위 큐 너무 편하고
         PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         for(int i = 0; i < N; i++) {
