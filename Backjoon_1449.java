@@ -18,17 +18,15 @@ public class Backjoon_1449 {
             arr[i] = Integer.parseInt(st2.nextToken());
         }
 
+
         Arrays.sort(arr);
 
-        int count = 0;
-        // 사이의 거리를 세는것이기 때문에 마지막 길이는 상관없다....
-        for (int i = 0; i < arr.length-1; i++) {
-            if (arr[i + 1] - arr[i] == (len - 1)) {
+        double range = arr[0] - 0.5 + len;
+        int count = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (range <= (double)(arr[i] - 0.5)) {
                 count++;
-                i++;
-                // 만약 테이프-1 의 길이를 넘긴다면 칸을 옮겨서 계산
-            } else {
-                count++;
+                range = arr[i] - 0.5 + len;
             }
         }
         System.out.println(count);
