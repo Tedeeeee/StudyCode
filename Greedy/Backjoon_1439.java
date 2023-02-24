@@ -32,6 +32,6 @@ public class Backjoon_1439 {
 //String S = br.readLine();
 //StringTokenizer st1 = new StringTokenizer(S, "0");
 //StringTokenizer st2 = new StringTokenizer(S, "1");
-//System.out.println(Math.min(st1.countToken(),st2countToken()))
+//System.out.println(Math.min(st1.countToken(),st2countToken()));
 
 // 하하..
