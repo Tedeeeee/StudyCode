@@ -9,21 +9,16 @@ public class Backjoon_10950 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int N = Integer.parseInt(br.readLine());
-        int[] arr = new int[N];
-
-        for (int i = 0; i < N; i++) {
+        while (true) {
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            arr[i] = a + b;
-        }
-
-        for (int val : arr) {
-            System.out.println(val);
+            if (a == 0 && b == 0) {
+                break;
+            }
+            System.out.println(a+b);
         }
     }
-
 }
