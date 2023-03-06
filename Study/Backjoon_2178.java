@@ -52,7 +52,7 @@ public class Backjoon_2178 {
             // y숫자를 ny에 대입
             int ny = N[1];
 
-            // 총 4방향이다
+            // 총 4방향이다.
             for (int i = 0; i < 4; i++) {
                 // (x축) 검색할 방향을 설정
                 int ax = zx[i] + nx;
