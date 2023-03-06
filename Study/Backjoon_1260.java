@@ -78,7 +78,7 @@ public class Backjoon_1260 {
                 if (Graph[start][i] == 1 && !visited[i]) {
                     // 방문안했으면 큐로 방문해야지
                     q.add(i);
-                    // 방문처리는 여기서 해주고
+                    // 방문처리는 여기서 해준다
                     visited[i] = true;
                 }
             }
