@@ -21,6 +21,7 @@ public class Backjoon_7576 {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
 
+        // 토마토 넝장 너비 초기화
         Graph = new int[m][n];
         visited = new boolean[m][n];
         for (int i = 0; i < m; i++) {
@@ -28,7 +29,9 @@ public class Backjoon_7576 {
             for (int j = 0; j < n; j++) {
                 Graph[i][j] = Integer.parseInt(st.nextToken());
 
+                // 익은 토마토가 있다면
                 if (Graph[i][j] == 1) {
+                    // 위치를 넣어주기
                     q.add(new int[]{i, j});
                     visited[i][j] = true;
                 }
