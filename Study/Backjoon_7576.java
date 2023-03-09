@@ -1,0 +1,76 @@
+package src.Study;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Backjoon_7576 {
+    public static int n,m,count;
+    public static int[][] Graph;
+    public static boolean[][] visited;
+    public static int[] dx = {-1, 1, 0, 0};
+    public static int[] dy = {0, 0, -1, 1};
+    public static Queue<int[]> q = new LinkedList<>();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        n = Integer.parseInt(st.nextToken());
+        m = Integer.parseInt(st.nextToken());
+
+        Graph = new int[m][n];
+        visited = new boolean[m][n];
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < n; j++) {
+                Graph[i][j] = Integer.parseInt(st.nextToken());
+
+                if (Graph[i][j] == 1) {
+                    q.add(new int[]{i, j});
+                    visited[i][j] = true;
+                }
+            }
+        }
+        System.out.println(BFS());
+    }
+    public static int BFS () {
+        while (!q.isEmpty()) {
+            int[] now = q.poll();
+            int nowX = now[0];
+            int nowY = now[1];
+            for (int i = 0; i < 4; i++) {
+                int nextX = dx[i] + nowX;
+                int nextY = dy[i] + nowY;
+
+                if (nextX < 0 || nextY < 0 || nextX >= m || nextY >= n) {
+                    continue;
+                }
+                if (visited[nextX][nextY] || Graph[nextX][nextY] == -1) {
+                    continue;
+                }
+
+                q.add(new int[]{nextX, nextY});
+                Graph[nextX][nextY] = Graph[nowX][nowY] + 1;
+                visited[nextX][nextY] = true;
+            }
+        }
+        int num = Integer.MIN_VALUE;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (Graph[i][j] == 0) {
+                    return -1;
+                }
+                num = Math.max(num, Graph[i][j]);
+            }
+        }
+        return num-1;
+    }
+}
+
+
+
+
+
