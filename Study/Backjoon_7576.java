@@ -33,6 +33,7 @@ public class Backjoon_7576 {
                 if (Graph[i][j] == 1) {
                     // 위치를 넣어주기
                     q.add(new int[]{i, j});
+                    // 방문처리
                     visited[i][j] = true;
                 }
             }
@@ -63,12 +64,15 @@ public class Backjoon_7576 {
         int num = Integer.MIN_VALUE;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
+                // 만약 0인 자리가 존재하면 -1 출력
                 if (Graph[i][j] == 0) {
                     return -1;
                 }
+                // 만들어낸 수중에 가장 큰거
                 num = Math.max(num, Graph[i][j]);
             }
         }
+        // 시작지점부터 센거라서 -1 해줘야함...
         return num-1;
     }
 }
