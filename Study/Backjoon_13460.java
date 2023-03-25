@@ -1,4 +1,4 @@
-package src.Study;
+package Study;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,6 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Backjoon_13460 {
-    /*
-
-     */
     public static int n, m;
     public static char[][] Graph;
     public static int[] Red = new int[2];
@@ -145,7 +142,7 @@ public class Backjoon_13460 {
         nx1 = Red[0] + dx[arr];
         ny1 = Red[1] + dy[arr];
         // 파란 구슬
-        nx2 = Blue[0] + dx[arr;
+        nx2 = Blue[0] + dx[arr];
         ny2 = Blue[1] + dy[arr];
 
         // Graph범위를 표현하는 것은 같은 행위 메서드화
