@@ -64,7 +64,7 @@ public class Backjoon_2805 {
         }
 
         이 생각을 못함...
-        여기서 upper 와 lower 방식의 차이가 생긴다.
+        여기서 upper 와 lower 방식의 차이가 생긴다
         if(sum < M) {
             max = mid;
         } else {
