@@ -1,4 +1,4 @@
-package Sorts;
+package Data_structure.Interface_form.Sorts;
 
 public class Shell_Sort {
     private final static int[] gap =

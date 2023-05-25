@@ -1,4 +1,4 @@
-package Sorts;
+package Data_structure.Interface_form.Sorts;
 
 public class Insertion_Sort {
     public static void insertion_sort(int[] a) {

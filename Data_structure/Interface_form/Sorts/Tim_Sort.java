@@ -1,4 +1,4 @@
-package Sorts;
+package Data_structure.Interface_form.Sorts;
 
 public class Tim_Sort {
     private static final int THRESHOLD = 32;
