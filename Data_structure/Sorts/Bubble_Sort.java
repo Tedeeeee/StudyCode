@@ -1,4 +1,4 @@
-package Data_structure.Interface_form.Sorts;
+package Data_structure.Sorts;
 
 public class Bubble_Sort {
     public static void bubble_sort(int[] a) {

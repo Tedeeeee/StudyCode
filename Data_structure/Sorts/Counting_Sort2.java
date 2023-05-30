@@ -1,3 +1,5 @@
+package Data_structure.Sorts;
+
 // 위에는 하는 과정에서 비교를 하기위해 사용한 것이다.
 // 수의 범위를 알고 입출력만 하는것이 목표라면
 // 굳이 index0 부터 입력하지 말고 counting으로 받자마자 바로 array배열의 인덱스로

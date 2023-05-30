@@ -77,4 +77,13 @@ public interface List<E> {
      */
     public void clear();
 
+
+    /**
+     * 리스트에 요소가 비어있는지를 확인한다.
+     *
+     * @return 리스트에 요소가 없을 경우 {@code true}, 요소가 있을 경우{@code false}를 반환
+     */
+    boolean isEmpty();
+
+
 }

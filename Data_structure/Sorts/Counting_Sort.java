@@ -1,3 +1,5 @@
+package Data_structure.Sorts;
+
 public class Counting_Sort {
     public static void main (String[] args) {
         int[] array = new int[100];

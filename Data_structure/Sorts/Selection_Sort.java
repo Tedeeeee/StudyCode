@@ -1,3 +1,5 @@
+package Data_structure.Sorts;
+
 public class Selection_Sort {
     public static void selection_sort(int[] a) {
         // 보다시피 정렬의 크기를 정해주었다
