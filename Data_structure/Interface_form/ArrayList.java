@@ -195,6 +195,7 @@ public class ArrayList<E> implements List<E> {
     }
 
     // 우리가 원하는 요소의 값을 지운다
+    @Override
     public boolean remove(Object value) {
 
         // 삭제하고자 하는 요소의 인덱스를 찾는다

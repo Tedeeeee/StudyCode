@@ -32,6 +32,11 @@ public interface List<E> {
     E remove(int index);
 
     /**
+     *  리스트에서 특정 요소를 삭제한다. 동일한 요소가 여러개일 경우 가장 처음 발견한 요소만 삭제된다.
+     */
+    boolean remove(Object value);
+
+    /**
      * 리스트에 있는 특정 위치의 요소를 반환한다
      *
      * @param index 리스트에 접근할 위치 변수
