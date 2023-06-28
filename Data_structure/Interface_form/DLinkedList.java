@@ -107,6 +107,14 @@ public class DLinkedList<E> implements List<E> {
         DNode<E> next_node = prev_node.next;
 
         // 추가하려는 노드
+        DNode<E> newNode = new DNode<E>(value);
+
+        // 링크 끊기
+        prev_node.next = null;
+        next_node.prev = null;
+
+        // 링크 연결하기
+        prev_node.next = newNode;
 
     }
 
